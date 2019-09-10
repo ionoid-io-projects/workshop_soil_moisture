@@ -1,0 +1,5 @@
+name: soil-env
+version: 1.0
+apps:
+    soil-env:
+        command:    /bin/soil

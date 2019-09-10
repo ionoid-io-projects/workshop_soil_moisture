@@ -1,0 +1,5 @@
+name: relay-env
+version: 1.0
+apps:
+    relay-env:
+        command:    /bin/relay
