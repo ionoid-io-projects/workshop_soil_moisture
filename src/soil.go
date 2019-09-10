@@ -24,7 +24,6 @@ func main() {
 
 	pin.Input()
 	pin.PullUp()
-	// pin.Detect(rpio.AnyEdge) // enable any edge event detection
 
 	fmt.Println("Searching for water...")
 
@@ -33,13 +32,11 @@ func main() {
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		// pin.Detect(rpio.NoEdge) // disable edge event detection
 		pin.PullDown()
 		os.Exit(0)
 	}()
 
 	for {
-		//		fmt.Println(pin.Read())
 		if pin.Read() == 1 { // check if event occured
 			fmt.Println("Water not detected....")
 		} else {
@@ -47,5 +44,4 @@ func main() {
 		}
 		time.Sleep(time.Second * 1)
 	}
-	// pin.Detect(rpio.NoEdge) // disable edge event detection
 }
