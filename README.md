@@ -5,7 +5,7 @@ Material for raspberry pi workshop
 
 ![Lighting an LED](doc/img/SoilMoisture.png)
 
-|RELAY                | Raspberry pi                  |
+|Sensor                | Raspberry pi                  |
 |-------------------|---------------------------------|
 |-                  | GND pin                         |
 |+                  | +5v pin                         |
